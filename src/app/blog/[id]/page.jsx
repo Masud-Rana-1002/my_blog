@@ -1,14 +1,14 @@
-// app/posts/[id]/page.js
-import { getPostDetails } from '@/api/postApi'; // Import the function to fetch post details
+
+
+import { getPostDetails } from '@/app/api/postApi';
 import React from 'react';
 
-// Dynamic page component for fetching and displaying post details
 const Page = async ({ params }) => {
   try {
-    // Fetch post details using the `id` from the dynamic route
+    
     const postDetails = await getPostDetails(params.id);
 
-    console.log(postDetails); // Log the data for debugging purposes
+    console.log(postDetails); 
 
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-4">

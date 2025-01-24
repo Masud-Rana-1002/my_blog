@@ -1,8 +1,9 @@
 
-import { getPost } from "@/api/postApi";
+
 
 import Image from "next/image";
 import Link from "next/link";
+import { getPost } from "./api/postApi";
 
 export default async function    Home()  {
 
@@ -10,7 +11,7 @@ export default async function    Home()  {
     return (
       <div>
         
-       <p>post{postData.length}</p>
+        <h1 className='text-3xl font-bold text-center p-4'>Blog Posts</h1>
        <div className='grid grid-cols-4 gap-6 '>
           {postData.map((post)=>(
             <Link href={`/blog/${post.id}`} key={post.id}>
